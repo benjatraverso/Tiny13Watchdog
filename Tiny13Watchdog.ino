@@ -35,6 +35,7 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
+  WDTCR |= _BV(WDTIE);//WDTIE must be set after each interrupt
   // go to sleep
   system_sleep();
   // if we got here, we woke up
